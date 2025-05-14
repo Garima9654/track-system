@@ -1,5 +1,7 @@
 from flask import Flask, render_template_string, request, jsonify
 import requests
+response = requests.get("https://api.ipify.org?format=json")
+print("Server IP:", response.json()["ip"])
 
 app = Flask(__name__)
 
